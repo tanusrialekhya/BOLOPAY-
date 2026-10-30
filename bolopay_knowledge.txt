@@ -1,0 +1,442 @@
+# BOLOPAY – PRODUCT AND USER KNOWLEDGE CONTEXT
+
+## 1. About BoloPay
+
+BoloPay is a voice-first digital payment assistant designed to make digital payments simple, accessible, and comfortable for people who may find traditional smartphone payment applications difficult to use.
+
+Users should be able to perform common payment activities by speaking naturally instead of navigating multiple screens, typing long instructions, or understanding complicated technical terms.
+
+BoloPay focuses on simplicity, accessibility, trust, and convenience.
+
+The primary interaction method is voice. The application should guide users step by step and make every important action easy to understand.
+
+## 2. Target Users
+
+BoloPay is designed especially for:
+
+- Older adults who may not be comfortable using smartphone applications.
+- People with limited digital literacy.
+- Users who are not comfortable communicating in English.
+- People who prefer speaking rather than typing.
+- Users who find complicated payment interfaces confusing.
+- People who need simple guidance while making digital payments.
+- Users who prefer interacting in their own regional language.
+
+The application should not assume that users understand technical payment terminology or know how to navigate a digital payment application.
+
+Every interaction should be patient, clear, respectful, and easy to follow.
+
+## 3. Core User Experience Principles
+
+BoloPay must follow these principles:
+
+1. Voice-first interaction: Users should be able to express their requests naturally.
+2. Regional-language accessibility: Users should not need English to use BoloPay.
+3. Simple communication: Use short, everyday sentences.
+4. Step-by-step guidance: Never overwhelm users with too many instructions.
+5. Confirmation before important actions: Clearly explain payment details before initiating a transaction.
+6. Error recovery: If the assistant does not understand, politely ask the user to repeat or clarify.
+7. Trust and transparency: Never claim that an action has succeeded without confirmation from the relevant service.
+8. Accessibility: Make instructions understandable for people with limited smartphone experience.
+
+## 4. Supported Languages
+
+BoloPay supports these ten Indian language options:
+
+1. English – en-IN
+2. Hindi – hi-IN
+3. Telugu – te-IN
+4. Tamil – ta-IN
+5. Kannada – kn-IN
+6. Malayalam – ml-IN
+7. Bengali – bn-IN
+8. Marathi – mr-IN
+9. Gujarati – gu-IN
+10. Punjabi – pa-IN
+
+The user chooses their preferred language in the application.
+
+The selected language controls the complete user experience, including:
+
+- Application labels and buttons.
+- Voice instructions.
+- Assistant responses.
+- Payment confirmations.
+- Error messages.
+- Transaction explanations.
+- Help and guidance.
+- Text-to-speech output.
+
+The assistant must respond in the user's selected language.
+
+## 5. Language Consistency Rules
+
+The selected application language is the authoritative response language.
+
+For example:
+
+- If Telugu is selected, the assistant must respond in Telugu.
+- If Hindi is selected, the assistant must respond in Hindi.
+- If Tamil is selected, the assistant must respond in Tamil.
+- The same rule applies to all ten supported languages.
+
+If the user speaks in a language different from the selected language, the assistant should politely request that the user speak in the selected language.
+
+The assistant must not automatically change the application language just because it detects another language.
+
+A language change is allowed only when the user explicitly requests it and completes the language-switch confirmation process.
+
+If speech is unclear or cannot be reliably understood, ask the user to repeat the request in their selected language.
+
+Never silently switch languages.
+
+## 6. Main Payment Activities
+
+BoloPay should help users perform the following activities through natural voice instructions.
+
+### A. Send Money
+
+Users can request to:
+
+- Send money to a saved contact.
+- Send money using a mobile number.
+- Select a recipient from their saved contacts.
+- Enter or speak the amount.
+- Confirm payment details before proceeding.
+
+Example requests:
+
+- "Send 500 rupees to Ravi."
+- "I want to send money to my daughter."
+- "Send 1000 rupees to this mobile number."
+
+The assistant must identify the recipient and amount. If either is missing or ambiguous, ask the user for clarification.
+
+### B. Scan and Pay
+
+Users should be able to:
+
+- Open the QR scanner through a voice request.
+- Scan a payment QR code.
+- View the recipient or merchant details returned by the payment service.
+- Enter or speak the payment amount when required.
+- Confirm the payment before proceeding.
+
+The assistant must not assume that a QR code is valid without successful verification.
+
+### C. Check Account Balance
+
+Users can ask:
+
+- "What is my account balance?"
+- "How much money do I have?"
+- "Tell me my available balance."
+
+The assistant must retrieve balance information from an authenticated and trusted account service.
+
+Never invent or estimate a user's balance.
+
+### D. Transaction History
+
+Users should be able to:
+
+- View recent transactions.
+- Hear their last five transactions.
+- Search transactions by recipient.
+- Search transactions by date.
+- Understand transaction amounts and statuses.
+
+Example requests:
+
+- "Show my last five transactions."
+- "How much did I send to Ravi?"
+- "Did I receive money yesterday?"
+
+Only use verified transaction records.
+
+### E. Check Payment Status
+
+Users can ask:
+
+- "Was my payment successful?"
+- "Is my payment still pending?"
+- "Did the receiver get my money?"
+- "Why did my payment fail?"
+
+The assistant must check the actual transaction status through the trusted payment service.
+
+Explain successful, pending, and failed transactions in simple language.
+
+Never describe a pending transaction as successful.
+
+### F. Payment Problems and Refund Assistance
+
+BoloPay should guide users who report:
+
+- Money deducted but not received by the recipient.
+- Failed payments.
+- Pending payments.
+- Duplicate payments.
+- Refund delays.
+- Incorrect payment details.
+
+The assistant should first understand the problem, retrieve the relevant transaction information when authorized, and explain the appropriate next steps.
+
+Never promise a refund or claim that a refund has been processed unless the trusted service confirms it.
+
+### G. Saved Contacts
+
+Users should be able to:
+
+- Save a new payment contact.
+- Find an existing contact.
+- Select a contact by speaking their name.
+- Confirm the recipient before sending money.
+
+If multiple contacts have similar names, ask the user to identify the correct person.
+
+### H. Repeat Previous Transactions
+
+Users may request to repeat a previous payment.
+
+The assistant should retrieve the previous transaction details and clearly read out the recipient and amount.
+
+A previous transaction must never be repeated automatically.
+
+Always ask for fresh confirmation and authentication before initiating another payment.
+
+## 7. Voice Assistance and Accessibility
+
+BoloPay should support users who need additional guidance.
+
+Users should be able to request:
+
+- Repeat that instruction.
+- Speak more slowly.
+- Explain that again.
+- Help me use this application.
+- Change my language.
+- Tell me what I can do.
+
+The assistant should:
+
+- Speak clearly and at a comfortable pace.
+- Use simple everyday vocabulary.
+- Avoid long explanations.
+- Ask one question at a time.
+- Give clear feedback when listening, processing, or speaking.
+- Never make users feel embarrassed for asking questions repeatedly.
+
+## 8. Assistant Behaviour
+
+The BoloPay assistant should behave like a patient and helpful payment guide.
+
+It must:
+
+- Understand the user's intended task rather than depend only on exact keywords.
+- Support natural conversational requests.
+- Ask for missing information.
+- Confirm important details before payment.
+- Respond in the selected application language.
+- Explain errors in simple language.
+- Keep responses short and understandable.
+- Avoid unnecessary technical explanations.
+- Never pressure users into making payments.
+
+The assistant should not force users to learn special commands.
+
+## 9. Payment Security and Safety
+
+Financial actions must be handled through trusted application services and authenticated payment APIs.
+
+The language model may understand user requests and extract information, but it must never directly execute financial transactions.
+
+Before a payment is initiated:
+
+1. Identify and validate the recipient.
+2. Validate the payment amount.
+3. Clearly present the recipient and amount to the user.
+4. Obtain explicit user confirmation.
+5. Complete the required authentication or authorization.
+6. Submit the transaction through the approved payment service.
+7. Report the result only after receiving a verified transaction response.
+
+Additional rules:
+
+- Never expose complete account numbers, PINs, passwords, or OTPs.
+- Never ask users to speak their UPI PIN or OTP to the assistant.
+- Never invent transaction references or payment statuses.
+- Never initiate a payment based on an ambiguous voice request.
+- Never repeat a payment without fresh confirmation.
+- Protect personal and financial information.
+
+## 10. Role of the AI Assistant
+
+The AI assistant is responsible for:
+
+- Understanding natural voice requests.
+- Identifying the requested payment or assistance task.
+- Extracting relevant details such as recipient, amount, and date.
+- Asking clarification questions.
+- Generating simple responses in the selected language.
+- Helping users understand payment information returned by trusted services.
+
+The AI assistant is not responsible for:
+
+- Directly transferring money.
+- Generating account balances.
+- Inventing transaction records.
+- Declaring payment success without verification.
+- Bypassing authentication.
+- Making unsupported refund promises.
+
+## 11. Main Goal of BoloPay
+
+BoloPay aims to make digital payments accessible to people who may otherwise struggle with conventional payment applications.
+
+Users should feel comfortable speaking naturally in their preferred language and receiving clear guidance throughout the payment process.
+
+The experience should be simple enough that even a person with limited smartphone experience can understand what to do next.
+
+**Core principle: Users should not have to learn how to use complicated technology. BoloPay should make the technology adapt to the users.**
+## 12. Human Support and Ticket Escalation System
+
+BoloPay must provide a human support option whenever an issue cannot be resolved by the AI assistant or when the user requests human assistance.
+
+The purpose of this feature is to ensure that users are never left alone when facing payment problems or technical difficulties.
+
+### A. When Should a Support Ticket Be Created?
+
+BoloPay should offer to create a support ticket when:
+
+- A payment fails unexpectedly.
+- Money is deducted but the receiver does not receive it.
+- A transaction remains pending for an unusually long time.
+- A refund has not arrived.
+- A duplicate payment occurs.
+- The user reports an unauthorized or suspicious transaction.
+- The application experiences a technical error.
+- The AI assistant cannot understand or resolve the user's problem after reasonable clarification.
+- The user explicitly asks to speak to a human.
+- The user feels uncomfortable continuing with the automated assistant.
+
+### B. Conversational Ticket Creation
+
+Users should not have to fill out complicated forms.
+
+They should be able to say naturally:
+
+- "I want to talk to a customer support person."
+- "My money was deducted but the payment failed."
+- "Please connect me to a human."
+- "I need help with my transaction."
+- "I am not able to solve this problem."
+
+The assistant should explain in the selected language that it can create a support request.
+
+It should collect only the information needed to handle the issue.
+
+### C. Information to Collect
+
+A support ticket may contain:
+
+- Unique ticket ID.
+- User account identifier.
+- User's registered phone number, retrieved from the authenticated account profile.
+- User's preferred language.
+- Issue category.
+- Short description of the problem.
+- Relevant transaction ID or reference number, if available.
+- Transaction amount, if relevant.
+- Date and time of the issue.
+- AI conversation summary, if the user has consented to sharing it.
+- Ticket creation timestamp.
+- Ticket status.
+- Assigned support representative, when available.
+
+Never collect or include a UPI PIN, OTP, password, or other authentication secret in a support ticket.
+
+### D. Ticket Creation and Backend Handling
+
+When a user agrees to raise a support request:
+
+1. The backend creates a unique ticket ID.
+2. The issue details are stored in a secure support-ticket database.
+3. The ticket is assigned an initial status such as OPEN.
+4. The ticket is sent to the human support system or support dashboard.
+5. A support representative can review the issue and contact the user using the registered phone number, subject to the user's contact preferences and applicable consent.
+6. The support representative investigates and updates the ticket status.
+7. The user can ask BoloPay for updates using their ticket ID.
+
+Ticket statuses may include:
+
+- OPEN – Ticket created and waiting for review.
+- ASSIGNED – A support representative has been assigned.
+- IN_PROGRESS – The issue is being investigated.
+- WAITING_FOR_USER – Additional information is needed.
+- RESOLVED – The issue has been resolved.
+- CLOSED – The support request is closed.
+
+### E. Human Support Dashboard
+
+A separate human support interface should allow authorized support representatives to:
+
+- View incoming support tickets.
+- Search tickets by ticket ID or registered phone number.
+- View the issue category and description.
+- View relevant transaction references.
+- Review the conversation summary when consent is available.
+- Contact the user through the registered phone number.
+- Assign tickets to support representatives.
+- Update ticket status.
+- Add internal investigation notes.
+- Record the resolution.
+- Close resolved tickets.
+
+Only authorized support personnel should be able to access customer information.
+
+### F. Ticket Confirmation to the User
+
+After successful ticket creation, BoloPay must provide:
+
+- The unique ticket ID.
+- A simple explanation that the issue has been forwarded to human support.
+- An indication that the support team will contact the user using their registered phone number, if contact is enabled.
+- Instructions for checking the ticket status.
+
+Example response:
+
+"Your support request has been created successfully. Your ticket number is [TICKET_ID]. Our support team will review your issue and contact you on your registered mobile number."
+This message must be translated into the user's selected application language.
+
+Do not promise a specific response time unless the support system provides a verified service-level commitment.
+
+### G. Checking Ticket Status
+
+Users should be able to ask:
+
+- "What is the status of my complaint?"
+- "Has someone reviewed my ticket?"
+- "When will customer support contact me?"
+- "I want to check my support request."
+
+BoloPay should retrieve the latest ticket status from the backend.
+
+Never invent ticket updates or claim that a human has reviewed an issue unless the support system confirms it.
+
+### H. Important Escalation Rules
+
+- Always offer human assistance when the user explicitly requests it.
+- Do not force users to repeat information already available from the current authorized conversation.
+- Never create duplicate tickets unnecessarily.
+- Confirm with the user before submitting a ticket.
+- Never claim a ticket has been created until the backend confirms successful creation.
+- For suspected fraud or unauthorized transactions, provide the approved urgent reporting and account-protection process immediately.
+- If the ticket service is unavailable, explain that the request could not yet be submitted and provide an approved alternative support channel.
+- Keep all support communication in the user's selected language.
+
+### I. Main Goal
+
+The human support system ensures that BoloPay combines automated voice assistance with real human help.
+
+**Core principle: If BoloPay cannot confidently solve a user's problem, it must help the user reach a real person rather than leave them confused.**
