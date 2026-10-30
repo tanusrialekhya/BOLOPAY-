@@ -717,8 +717,8 @@ async def hear(wav, lang):
         transcript = await asyncio.wait_for(
             asyncio.to_thread(_gnani_stt, wav, lang), timeout=25
         )
-    except asyncio.TimeoutError as exc:
-        raise RuntimeError("Gnani STT timed out.") from exc
+    except Exception:
+        raise RuntimeError("The speech service is busy. Please try again.") from None
     transcript = transcript.strip() if isinstance(transcript, str) else ""
     if transcript and script_ok(transcript, lang):
         return [transcript]
