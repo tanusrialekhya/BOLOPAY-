@@ -29,8 +29,7 @@ Users can interact with BoloPay using voice commands in multiple Indian language
 
 ## Project Structure
 
-'''text
-
+```text
 BoloPay/
 │
 ├── main.py
