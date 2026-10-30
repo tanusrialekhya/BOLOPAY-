@@ -19,13 +19,14 @@ Users can interact with BoloPay using voice commands in multiple Indian language
 
 ## Technology Stack
 
-
+```text
 | Frontend --- Streamlit, HTML, CSS, JavaScript 
 | Backend --- Python, FastAPI 
 | Communication --- WebSocket 
 | Speech-to-Text --- Gnani STT (Gnani Prisma V2.5)
 | AI Model  --- GPT-OSS-20B (Groq)
 | Text-to-Speech --- Gnani TTS (Gnani Timbre V3.0)
+```
 
 ## Project Structure
 
