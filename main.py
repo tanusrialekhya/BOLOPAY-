@@ -279,80 +279,8 @@ div[data-testid="stForm"]{border-radius:22px;padding:16px;background:#fff;border
 st.markdown(CSS.replace("__FAM__", fam).replace("__FONT__", FONT).replace("__FS__", FS).replace("__BG__", BGS[mood])
             .replace("__ACTIVE__", ACTIVE).replace("__UP__", TX["upload"].replace('"', "'"))
             .replace("__SNAP__", TX["take_photo"].replace('"', "'")), unsafe_allow_html=True)
-
-    # Hero text
-    st.markdown("""
-    <div style="text-align:center; margin: 20px 0 25px 0;">
-        <div style="font-size:1.8rem; font-weight:800; line-height:1.2; color:#0e1b36;">
-            Speak. Pay.<br><span style="color:#1265f1;">Simplify.</span>
-        </div>
-        <div style="color:#5a6f8f; margin-top:8px; font-size:0.95rem;">
-            Your voice-powered payment assistant
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-
-    # Quick action tiles
-    t1, t2 = st.columns(2)
-    with t1:
-        if st.button("📷\nScan QR", key="tile_scan", use_container_width=True):
-            go("scan")
-    with t2:
-        if st.button("💸\nPay", key="tile_pay", use_container_width=True):
-            go("pay")
-
-    t3, t4 = st.columns(2)
-    with t3:
-        if st.button("🕘\nHistory", key="tile_hist", use_container_width=True):
-            go("history")
-    with t4:
-        if st.button("💰\nBalance", key="tile_bal", use_container_width=True):
-            go("balance")
-
-    st.markdown("<br>", unsafe_allow_html=True)
-
-    # Suggestion pills
-    st.markdown("<div style='font-size:0.9rem; color:#5a6f8f; margin-bottom:8px;'>Say things like</div>", unsafe_allow_html=True)
-    st.markdown("""
-    <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px;">
-        <span style="background:#e8f0fe; color:#1265f1; padding:6px 14px; border-radius:20px; font-size:0.85rem; font-weight:600;">Pay ₹500 to Amma</span>
-        <span style="background:#e8f0fe; color:#1265f1; padding:6px 14px; border-radius:20px; font-size:0.85rem; font-weight:600;">Show my balance</span>
-        <span style="background:#e8f0fe; color:#1265f1; padding:6px 14px; border-radius:20px; font-size:0.85rem; font-weight:600;">Open history</span>
-    </div>
-    """, unsafe_allow_html=True)
-
-    # Big mic button
-    st.markdown("<div style='text-align:center; margin-top:30px;'>", unsafe_allow_html=True)
-    if st.button("🎙️\nTap and speak", key="mic_main", use_container_width=True):
-        st.session_state.bubble = "Listening..."
-    st.markdown("</div>", unsafe_allow_html=True)
-
-    # Close phone div
-    st.markdown("</div>", unsafe_allow_html=True)
-
-
-# ---------- RIGHT SIDE: PIPELINE ----------
-with col2:
-    st.markdown("### 🔄 Live Pipeline")
-    st.caption("What is happening right now")
-
-    st.markdown("""
-    <div style="background:#f8fafc; border-radius:16px; padding:18px; border:1px solid #e2e8f0;">
-    """, unsafe_allow_html=True)
-
-    st.info("1️⃣ **VAD**\nVoice Activity Detection")
-    st.success("2️⃣ **STT**\nGnani Prisma v2.5")
-    st.warning("3️⃣ **LLM**\nGroq GPT-OSS-20B")
-    st.success("4️⃣ **TTS**\nGnani Timbre v2.5")
-
-    st.markdown("</div>", unsafe_allow_html=True)
-
-    st.markdown("---")
-    st.markdown("**Current Status**")
-    st.write("Waiting for voice input...")
-
-    st.markdown("<br>", unsafe_allow_html=True)
-    st.caption("Models used: Prisma + Timbre (Gnani AI)")
+#-------------------------------------
+    
 # ---------------- ASSISTANT GIRL ----------------
 GIRL_SVG = """
 <svg viewBox="0 0 240 255" width="__W__" xmlns="http://www.w3.org/2000/svg">
