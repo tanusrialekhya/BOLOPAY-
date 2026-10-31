@@ -280,35 +280,6 @@ st.markdown(CSS.replace("__FAM__", fam).replace("__FONT__", FONT).replace("__FS_
             .replace("__ACTIVE__", ACTIVE).replace("__UP__", TX["upload"].replace('"', "'"))
             .replace("__SNAP__", TX["take_photo"].replace('"', "'")), unsafe_allow_html=True)
 
-# ==================== TEMP DEMO LAYOUT ====================
-col1, col2 = st.columns([1.35, 1])
-
-# ---------- LEFT SIDE: PHONE ----------
-with col1:
-    st.markdown("""
-    <div style="
-        border: 12px solid #1a1a1a;
-        border-radius: 42px;
-        padding: 22px 18px;
-        background: linear-gradient(180deg, #f0f7ff, #ffffff);
-        max-width: 400px;
-        margin: 0 auto;
-        box-shadow: 0 25px 60px rgba(0,0,0,0.28);
-        min-height: 720px;
-        position: relative;
-    ">
-    """, unsafe_allow_html=True)
-
-    # Header inside phone
-    st.markdown(f"""
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:18px;">
-        <div style="font-size:1.4rem; font-weight:800; color:#1265f1;">BoloPay</div>
-        <div style="background:#e8f0fe; padding:4px 12px; border-radius:20px; font-size:0.85rem; font-weight:600;">
-            {ss.language}
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-
     # Hero text
     st.markdown("""
     <div style="text-align:center; margin: 20px 0 25px 0;">
