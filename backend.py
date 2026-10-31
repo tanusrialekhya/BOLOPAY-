@@ -412,7 +412,7 @@ CONTACTS: {", ".join(CONTACTS)}. Amma=mother/mummy/maa/అమ్మ/अम्म
 
 Shopkeeper=dukaan/dukandar. Convert spoken numbers to digits ("five hundred"/"ఐదు వందలు"/"पाँच सौ" -> 500).
 
-RULES: "Pay 500 to Rahul" -> prepare_payment. The payee may be a saved contact (Amma, Dad, Rahul, Priya, Shopkeeper) OR a valid 10-digit Indian mobile number. The app opens its existing payments/PIN screen after preparation. Speak the payment-ready message once; do not interrupt while the user is entering the PIN. The PIN is entered only in the frontend and is never sent to this backend. "Open camera / scan" -> open_screen scan camera.
+RULES: "Pay 500 to Rahul" -> prepare_payment. The payee may be a saved contact (Amma, Dad, Rahul, Priya, Shopkeeper), OR any person's name exactly as the user said it, OR a valid 10-digit Indian mobile number. Never refuse a payment because the name is not a saved contact. The app opens its existing payments/PIN screen after preparation. Speak the payment-ready message once; do not interrupt while the user is entering the PIN. The PIN is entered only in the frontend and is never sent to this backend. "Open camera / scan" -> open_screen scan camera.
 
 Balance, history, help, home and font requests are normal: do them. If amount or payee is missing, no action, say which is
 
@@ -536,25 +536,16 @@ def clean_actions(raw, heard_text):
             out.append(o)
 
         elif t == "prepare_payment":
-
-            payee = str(a.get("payee", "")).strip()
-
+            payee = re.sub(r"\s+", " ", str(a.get("payee", ""))).strip()[:40]
             phone = norm_phone(payee)
-
             contact = next((c for c in CONTACTS if c.lower() == payee.lower()), None)
-
             try:
-
                 amount = round(float(a.get("amount")), 2)
-
             except (TypeError, ValueError):
-
                 amount = 0
-
-            if (phone or contact) and 0 < amount <= 100000:
-
-                return [{"tool": "prepare_payment", "payee": phone or contact, "amount": amount}], False
-
+            has_name = bool(payee) and any(ch.isalpha() for ch in payee)
+            if (phone or contact or has_name) and 0 < amount <= 100000:
+                return [{"tool": "prepare_payment", "payee": phone or contact or payee, "amount": amount}], False
             bad_pay = True
 
         elif t == "set_language" and a.get("lang") in LANGS and asked_lang:      # never on its own
