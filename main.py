@@ -46,6 +46,31 @@ FONT_OF = {"English": "Inter", "हिंदी": "Noto Sans Devanagari", "म�
            "മലയാളം": "Noto Sans Malayalam", "বাংলা": "Noto Sans Bengali", "ગુજરાતી": "Noto Sans Gujarati",
            "ਪੰਜਾਬੀ": "Noto Sans Gurmukhi"}
 
+# (label, placeholder, error) for the 10-digit mobile number bar, in every language
+MOB = {
+    "English": ("Or pay to a 10-digit mobile number", "Enter 10-digit mobile number",
+                "Enter a valid 10-digit mobile number starting with 6, 7, 8 or 9."),
+    "हिंदी": ("या 10 अंकों के मोबाइल नंबर पर भेजें", "10 अंकों का मोबाइल नंबर डालें",
+              "6, 7, 8 या 9 से शुरू होने वाला सही 10 अंकों का मोबाइल नंबर डालें।"),
+    "తెలుగు": ("లేదా 10 అంకెల మొబైల్ నంబర్‌కు చెల్లించండి", "10 అంకెల మొబైల్ నంబర్ నమోదు చేయండి",
+               "6, 7, 8 లేదా 9తో మొదలయ్యే సరైన 10 అంకెల మొబైల్ నంబర్ నమోదు చేయండి."),
+    "தமிழ்": ("அல்லது 10 இலக்க மொபைல் எண்ணுக்கு செலுத்துங்கள்", "10 இலக்க மொபைல் எண்ணை உள்ளிடவும்",
+              "6, 7, 8 அல்லது 9 இல் தொடங்கும் சரியான 10 இலக்க மொபைல் எண்ணை உள்ளிடவும்."),
+    "ಕನ್ನಡ": ("ಅಥವಾ 10 ಅಂಕಿಯ ಮೊಬೈಲ್ ಸಂಖ್ಯೆಗೆ ಪಾವತಿಸಿ", "10 ಅಂಕಿಯ ಮೊಬೈಲ್ ಸಂಖ್ಯೆ ನಮೂದಿಸಿ",
+              "6, 7, 8 ಅಥವಾ 9 ರಿಂದ ಪ್ರಾರಂಭವಾಗುವ ಸರಿಯಾದ 10 ಅಂಕಿಯ ಮೊಬೈಲ್ ಸಂಖ್ಯೆ ನಮೂದಿಸಿ."),
+    "മലയാളം": ("അല്ലെങ്കിൽ 10 അക്ക മൊബൈൽ നമ്പറിലേക്ക് പണമടയ്ക്കുക", "10 അക്ക മൊബൈൽ നമ്പർ നൽകുക",
+               "6, 7, 8 അല്ലെങ്കിൽ 9 ൽ തുടങ്ങുന്ന ശരിയായ 10 അക്ക മൊബൈൽ നമ്പർ നൽകുക."),
+    "বাংলা": ("অথবা 10 সংখ্যার মোবাইল নম্বরে পাঠান", "10 সংখ্যার মোবাইল নম্বর লিখুন",
+              "6, 7, 8 বা 9 দিয়ে শুরু হওয়া সঠিক 10 সংখ্যার মোবাইল নম্বর লিখুন।"),
+    "मराठी": ("किंवा 10 अंकी मोबाइल नंबरवर पाठवा", "10 अंकी मोबाइल नंबर टाका",
+              "6, 7, 8 किंवा 9 ने सुरू होणारा योग्य 10 अंकी मोबाइल नंबर टाका."),
+    "ગુજરાતી": ("અથવા 10 અંકના મોબાઇલ નંબર પર ચૂકવો", "10 અંકનો મોબાઇલ નંબર દાખલ કરો",
+               "6, 7, 8 અથવા 9 થી શરૂ થતો સાચો 10 અંકનો મોબાઇલ નંબર દાખલ કરો."),
+    "ਪੰਜਾਬੀ": ("ਜਾਂ 10 ਅੰਕਾਂ ਦੇ ਮੋਬਾਈਲ ਨੰਬਰ 'ਤੇ ਭੇਜੋ", "10 ਅੰਕਾਂ ਦਾ ਮੋਬਾਈਲ ਨੰਬਰ ਦਰਜ ਕਰੋ",
+              "6, 7, 8 ਜਾਂ 9 ਨਾਲ ਸ਼ੁਰੂ ਹੋਣ ਵਾਲਾ ਸਹੀ 10 ਅੰਕਾਂ ਦਾ ਮੋਬਾਈਲ ਨੰਬਰ ਦਰਜ ਕਰੋ।"),
+}
+
+
 def uid():
     return str(time.time_ns())
 
@@ -74,6 +99,8 @@ else:
 
 FONT = FONT_OF.get(ss.language, "Inter")
 FS = {"Small": "14px", "Medium": "16px", "Large": "19px"}[ss.font_size]
+MOBT = MOB.get(ss.language, MOB["English"])
+PHONE_RE = re.compile(r"[6-9][0-9]{9}")
 
 
 def dn(p):
@@ -238,6 +265,14 @@ div[data-testid="stForm"]{border-radius:22px;padding:16px;background:#fff;border
 .banner.ok{background:linear-gradient(135deg,#22c55e,#0f9d58)}.banner.bad{background:linear-gradient(135deg,#ef4444,#b91c1c)}
 @keyframes drop{from{transform:translate(-50%,-160%)}to{transform:translate(-50%,0)}}
 @keyframes away{to{opacity:0;transform:translate(-50%,-160%)}}
+
+/* PIN popup, fixed at the top of the page */
+.st-key-pinpop{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:9998;width:min(460px,92vw);
+ background:#fff;border:2px solid #1265f1;border-radius:22px;padding:16px 18px 10px;
+ box-shadow:0 18px 50px rgba(18,43,82,.35);animation:drop .5s cubic-bezier(.2,1.4,.4,1) both}
+.st-key-pinpop div[data-testid="stForm"]{border:0;padding:0;box-shadow:none;background:transparent}
+.pp-head{font-weight:800;font-size:1.15em}
+.pp-sub{color:#4d6285!important;margin-bottom:6px}
 @media(max-width:900px){.hero-h{font-size:2.3rem}.stage{height:380px}}
 </style>
 """
@@ -380,6 +415,69 @@ if ss.screen == "result":                                     # pop-out banner
         st.markdown(f'<div class="banner bad">⚠️ {html.escape(ss.result_msg)}</div>', unsafe_allow_html=True)
 
 
+# ---------------- PIN POPUP (top of the page) ----------------
+def pin_popup(kind):
+    """kind = 'pay' or 'balance'. The PIN is checked here in the browser session and never sent to the backend."""
+    p = ss.pending_payment
+    with st.container(key="pinpop"):
+        if kind == "pay":
+            head = f'🔒 {TX["pin_label"]}'
+            sub = f'{html.escape(dn(p["name"]))} · ₹{p["amount"]:,.0f}'
+        else:
+            head = f'🔒 {TX["pin_bal"]}'
+            sub = html.escape(TX["bal_title"])
+        st.markdown(f'<div class="pp-head">{head}</div><div class="pp-sub">{sub}</div>', unsafe_allow_html=True)
+        with st.form(f"pin_form_{kind}", clear_on_submit=True):
+            pin = st.text_input(TX["pin_label"], type="password", max_chars=4,
+                                label_visibility="collapsed", placeholder="• • • •")
+            b1, b2 = st.columns(2)
+            go_btn = b1.form_submit_button(("🔒  " + TX["confirm_pay"]) if kind == "pay" else ("🔒  " + TX["unlock"]),
+                                           type="primary", use_container_width=True)
+            cancel = b2.form_submit_button("✖  " + TX["cancel"], use_container_width=True)
+
+    if cancel:
+        go("home")
+    if not go_btn:
+        return
+
+    if kind == "pay":
+        amt = float(p["amount"])
+        if amt > ss.balance:
+            ss.pin_tries = 0
+            insufficient_balance(amt)
+        elif pin == APP_PIN:
+            ss.balance = round(float(ss.balance) - amt, 2)         # wallet changes only after the PIN
+            ss.history.append({"name": p["name"], "amount": amt, "type": "paid", "note": p["note"],
+                               "time": datetime.now().strftime("%d/%m %H:%M")})
+            ss.pin_tries = 0
+            result("ok", "",
+                   TX["say_ok"].replace("{amt}", f"{amt:,.0f}").replace("{name}", dn(p["name"])),
+                   {"name": dn(p["name"]), "amount": amt, "balance": ss.balance})
+        else:
+            ss.pin_tries += 1
+            if ss.pin_tries >= MAX_PIN_TRIES:
+                ss.pin_tries = 0
+                result("bad", TX["too_many"], TX["say_cancel"])
+            else:
+                result("retry", f'{TX["bad_pin"]} · {MAX_PIN_TRIES - ss.pin_tries} {TX["tries_left"]}', TX["say_bad"])
+    else:
+        if pin == APP_PIN:
+            ss.pin_verified, ss.bal_tries = True, 0
+            ss.bubble = ""
+            st.rerun()
+        ss.bal_tries += 1
+        if ss.bal_tries >= MAX_PIN_TRIES:
+            ss.bal_tries = 0
+            result("bad", TX["too_many"], TX["say_cancel"])
+        result("retry_bal", f'{TX["bad_pin"]} · {MAX_PIN_TRIES - ss.bal_tries} {TX["tries_left"]}', TX["say_bad"])
+
+
+if ss.screen == "pay" and ss.pending_payment:
+    pin_popup("pay")
+elif ss.screen == "balance" and not ss.pin_verified:
+    pin_popup("balance")
+
+
 # ---------------- VOICE ACTIONS ----------------
 def apply_voice_action(v):
     ss.last_voice_id = v["id"]
@@ -396,7 +494,10 @@ def apply_voice_action(v):
                 continue
             if amt <= 0 or amt > 100000:
                 continue
-            ss.payee, ss.amount = str(a.get("payee", "")), amt
+            payee = re.sub(r"\s+", " ", str(a.get("payee", ""))).strip()[:40]
+            if not payee:
+                continue
+            ss.payee, ss.amount = payee, amt                     # any name is accepted
             nav("pay")
             if amt > ss.balance:
                 insufficient_balance(amt)
@@ -539,97 +640,50 @@ with left:
         st.markdown(f'<div class="steps"><div class="st {"dn" if p else "on"}"><b>{"✓" if p else "1"}</b>{TX["step1"]}</div><div class="ln"></div>'
                     f'<div class="st {"on" if p else ""}"><b>2</b>{TX["step2"]}</div><div class="ln"></div>'
                     f'<div class="st"><b>3</b>{TX["step3"]}</div></div>', unsafe_allow_html=True)
-        if p:                                                  # step 2: PIN (typed only)
+        if p:                                                  # step 2: the PIN popup is shown at the top of the page
             st.markdown(f'<div class="card pay-card"><div class="avatar" style="margin:0 auto 4px">{html.escape(dn(p["name"])[:1])}</div>'
                         f'<div class="tx-name">{html.escape(dn(p["name"]))}</div>'
                         f'<div class="big">₹{p["amount"]:,.0f}</div>'
                         f'<div class="muted">{html.escape(p["note"])}</div></div>', unsafe_allow_html=True)
-            with st.form("pay_pin_form"):
-                pin = st.text_input(TX["pin_label"], type="password", max_chars=4)
-                go_btn = st.form_submit_button("🔒  " + TX["confirm_pay"], type="primary", use_container_width=True)
-            if go_btn:
-                amt = float(p["amount"])
-                if amt > ss.balance:
-                    ss.pin_tries = 0
-                    insufficient_balance(amt)
-                elif pin == APP_PIN:
-                    # Update the demo wallet only after PIN confirmation.
-                    ss.balance = round(float(ss.balance) - amt, 2)
-                    ss.history.append({
-                        "name": p["name"],
-                        "amount": amt,
-                        "type": "paid",
-                        "note": p["note"],
-                        "time": datetime.now().strftime("%d/%m %H:%M")
-                    })
-                    ss.pin_tries = 0
-                    result(
-                        "ok",
-                        "",
-                        TX["say_ok"].replace("{amt}", f"{amt:,.0f}").replace("{name}", dn(p["name"])),
-                        {"name": dn(p["name"]), "amount": amt, "balance": ss.balance}
-                    )
-                else:
-                    ss.pin_tries += 1
-                    if ss.pin_tries >= MAX_PIN_TRIES:
-                        ss.pin_tries = 0
-                        result("bad", TX["too_many"], TX["say_cancel"])
-                    else:
-                        result(
-                            "retry",
-                            f'{TX["bad_pin"]} · {MAX_PIN_TRIES - ss.pin_tries} {TX["tries_left"]}',
-                            TX["say_bad"]
-                        )
+            st.caption("🔒 " + TX["bub_pin"])
             if st.button("✖  " + TX["cancel"], use_container_width=True, key="pay_cancel"):
                 go("home")
         else:                                                   # step 1: details
             st.markdown(f'<div class="card pay-card"><div class="avatar" style="margin:0 auto 4px">{html.escape(dn(ss.payee)[:1])}</div>'
                         f'<div class="tx-name">{html.escape(dn(ss.payee))}</div>'
                         f'<div class="big">₹{ss.amount:,.0f}</div></div>', unsafe_allow_html=True)
-
-            # Selector is outside the form so choosing a new number immediately reveals its input.
-            options = CONTACTS + ["New mobile number"]
-            recipient_choice = st.selectbox(
-                TX["pay_to"],
-                options,
-                index=options.index(ss.payee) if ss.payee in options else 0,
-                format_func=lambda value: "Enter a new mobile number" if value == "New mobile number" else dn(value),
-                key="pay_recipient_choice"
-            )
-
-            mobile_number = ""
-            if recipient_choice == "New mobile number":
-                mobile_number = st.text_input(
-                    "Mobile number",
-                    max_chars=10,
-                    placeholder="Enter 10-digit Indian mobile number",
-                    key="pay_recipient_mobile"
-                )
-                st.caption("Enter the recipient's 10-digit Indian mobile number.")
-
+            cur = str(ss.payee or "")
+            cur_is_phone = bool(PHONE_RE.fullmatch(cur))
+            options = CONTACTS[:]
+            if cur and cur not in options and not cur_is_phone:
+                options.append(cur)                              # any name spoken or typed earlier stays selectable
             with st.form("payment_form"):
+                recipient = st.selectbox(TX["pay_to"], options,
+                                         index=options.index(cur) if cur in options else 0, format_func=dn)
+                mobile = st.text_input(MOBT[0], value=cur if cur_is_phone else "", max_chars=10,
+                                       placeholder=MOBT[1])
                 amount = st.number_input(TX["amount"], min_value=1.0, value=max(1.0, float(ss.amount)), step=50.0)
                 note = st.text_input(TX["note"])
                 submit = st.form_submit_button(TX["pay_now"], type="primary", use_container_width=True)
-
             if submit:
-                if recipient_choice == "New mobile number":
-                    mobile_number = mobile_number.strip()
-                    if not re.fullmatch(r"[6-9][0-9]{9}", mobile_number):
-                        st.error("Enter a valid 10-digit Indian mobile number starting with 6, 7, 8 or 9.")
-                        st.stop()
-                    recipient = mobile_number
-                else:
-                    recipient = recipient_choice
-
-                ss.payee, ss.amount = recipient, float(amount)
-                if ss.amount > ss.balance:
-                    insufficient_balance(ss.amount)
-                else:
-                    ss.pending_payment = {"name": recipient, "amount": ss.amount, "note": note}
-                    ss.pin_tries = 0
-                    ss.bubble = ""
-                    st.rerun()
+                mob = (mobile or "").strip()
+                final = recipient
+                valid = True
+                if mob:                                          # a mobile number overrides the name
+                    if PHONE_RE.fullmatch(mob):
+                        final = mob
+                    else:
+                        valid = False
+                        st.error(MOBT[2])
+                if valid:
+                    ss.payee, ss.amount = final, float(amount)
+                    if ss.amount > ss.balance:
+                        insufficient_balance(ss.amount)
+                    else:
+                        ss.pending_payment = {"name": final, "amount": ss.amount, "note": note}
+                        ss.pin_tries = 0
+                        ss.bubble = ""
+                        st.rerun()
         if st.button("←  " + TX["back"], use_container_width=True, key="pay_back"):
             go("home")
 
@@ -660,20 +714,9 @@ with left:
 
     elif s == "balance":
         title("🔒 " + TX["bal_title"])
-        if not ss.pin_verified:
-            with st.form("balance_pin_form"):
-                pin = st.text_input(TX["pin_bal"], type="password", max_chars=4)
-                unlock = st.form_submit_button(TX["unlock"], type="primary", use_container_width=True)
-            if unlock:
-                if pin == APP_PIN:
-                    ss.pin_verified, ss.bal_tries = True, 0
-                    ss.bubble = ""
-                    st.rerun()
-                ss.bal_tries += 1
-                if ss.bal_tries >= MAX_PIN_TRIES:
-                    ss.bal_tries = 0
-                    result("bad", TX["too_many"], TX["say_cancel"])
-                result("retry_bal", f'{TX["bad_pin"]} · {MAX_PIN_TRIES - ss.bal_tries} {TX["tries_left"]}', TX["say_bad"])
+        if not ss.pin_verified:                                  # the PIN popup is shown at the top of the page
+            st.markdown('<div class="card pay-card" style="font-size:3rem">🔐</div>', unsafe_allow_html=True)
+            st.caption("🔒 " + TX["bub_bal"])
         else:
             st.markdown(f'<div class="card"><b>{TX["holder"]}</b><br>{html.escape(ss.user_name or "—")}<hr>'
                         f'<b>{TX["acc"]}</b><br>XXXX XXXX 1234<hr><b>{TX["avail"]}</b><br>'
