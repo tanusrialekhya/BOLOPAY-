@@ -1,4 +1,4 @@
-"""BoloPay backend:  uvicorn backend:app --port 8000
+"""BolPay backend:  uvicorn backend:app --port 8000
 
 audio -> Gnani STT only -> Groq gpt-oss-20b -> Gnani TTS only
 
@@ -241,16 +241,16 @@ CANNED = {
 }
 
 OUT_OF_SCOPE = {
-    "en-IN": "I don't know that. I can help with BoloPay payments, balance, history, and QR scanning.",
-    "hi-IN": "मुझे इसकी जानकारी नहीं है। मैं BoloPay भुगतान, बैलेंस, हिस्ट्री और QR स्कैन में मदद कर सकता हूँ।",
-    "te-IN": "దాని గురించి నాకు తెలియదు. BoloPay చెల్లింపులు, బ్యాలెన్స్, చరిత్ర, QR స్కానింగ్‌లో సహాయం చేయగలను.",
-    "ta-IN": "அது எனக்குத் தெரியாது. BoloPay பணப்பரிவர்த்தனை, இருப்பு, வரலாறு, QR ஸ்கேன் ஆகியவற்றில் உதவ முடியும்.",
-    "kn-IN": "ಅದರ ಬಗ್ಗೆ ನನಗೆ ತಿಳಿದಿಲ್ಲ. BoloPay ಪಾವತಿ, ಬಾಕಿ, ಇತಿಹಾಸ ಮತ್ತು QR ಸ್ಕ್ಯಾನ್‌ನಲ್ಲಿ ಸಹಾಯ ಮಾಡಬಹುದು.",
-    "ml-IN": "അത് എനിക്ക് അറിയില്ല. BoloPay പേയ്‌മെന്റ്, ബാലൻസ്, ഇടപാട് ചരിത്രം, QR സ്കാൻ എന്നിവയിൽ സഹായിക്കാം.",
-    "bn-IN": "এটি আমার জানা নেই। BoloPay পেমেন্ট, ব্যালেন্স, ইতিহাস ও QR স্ক্যানে সাহায্য করতে পারি।",
-    "mr-IN": "मला त्याची माहिती नाही. मी BoloPay पेमेंट, शिल्लक, व्यवहार इतिहास आणि QR स्कॅनमध्ये मदत करू शकतो.",
-    "gu-IN": "મને તેની જાણ નથી. હું BoloPay પેમેન્ટ, બેલેન્સ, ઇતિહાસ અને QR સ્કેનમાં મદદ કરી શકું છું.",
-    "pa-IN": "ਮੈਨੂੰ ਇਸ ਬਾਰੇ ਪਤਾ ਨਹੀਂ। ਮੈਂ BoloPay ਭੁਗਤਾਨ, ਬਕਾਇਆ, ਇਤਿਹਾਸ ਅਤੇ QR ਸਕੈਨ ਵਿੱਚ ਮਦਦ ਕਰ ਸਕਦਾ ਹਾਂ।",
+    "en-IN": "I don't know that. I can help with BolPay payments, balance, history, and QR scanning.",
+    "hi-IN": "मुझे इसकी जानकारी नहीं है। मैं BolPay भुगतान, बैलेंस, हिस्ट्री और QR स्कैन में मदद कर सकता हूँ।",
+    "te-IN": "దాని గురించి నాకు తెలియదు. BolPay చెల్లింపులు, బ్యాలెన్స్, చరిత్ర, QR స్కానింగ్‌లో సహాయం చేయగలను.",
+    "ta-IN": "அது எனக்குத் தெரியாது. BolPay பணப்பரிவர்த்தனை, இருப்பு, வரலாறு, QR ஸ்கேன் ஆகியவற்றில் உதவ முடியும்.",
+    "kn-IN": "ಅದರ ಬಗ್ಗೆ ನನಗೆ ತಿಳಿದಿಲ್ಲ. BolPay ಪಾವತಿ, ಬಾಕಿ, ಇತಿಹಾಸ ಮತ್ತು QR ಸ್ಕ್ಯಾನ್‌ನಲ್ಲಿ ಸಹಾಯ ಮಾಡಬಹುದು.",
+    "ml-IN": "അത് എനിക്ക് അറിയില്ല. BolPay പേയ്‌മെന്റ്, ബാലൻസ്, ഇടപാട് ചരിത്രം, QR സ്കാൻ എന്നിവയിൽ സഹായിക്കാം.",
+    "bn-IN": "এটি আমার জানা নেই। BolPay পেমেন্ট, ব্যালেন্স, ইতিহাস ও QR স্ক্যানে সাহায্য করতে পারি।",
+    "mr-IN": "मला त्याची माहिती नाही. मी BolPay पेमेंट, शिल्लक, व्यवहार इतिहास आणि QR स्कॅनमध्ये मदत करू शकतो.",
+    "gu-IN": "મને તેની જાણ નથી. હું BolPay પેમેન્ટ, બેલેન્સ, ઇતિહાસ અને QR સ્કેનમાં મદદ કરી શકું છું.",
+    "pa-IN": "ਮੈਨੂੰ ਇਸ ਬਾਰੇ ਪਤਾ ਨਹੀਂ। ਮੈਂ BolPay ਭੁਗਤਾਨ, ਬਕਾਇਆ, ਇਤਿਹਾਸ ਅਤੇ QR ਸਕੈਨ ਵਿੱਚ ਮਦਦ ਕਰ ਸਕਦਾ ਹਾਂ।",
 }
 
 SERVICE_ERROR = {
@@ -334,7 +334,7 @@ except Exception:
 
     KNOWLEDGE = ""
 
-SYSTEM = f"""You are BoloPay, a friendly voice payment assistant (DEMO: no real money moves).
+SYSTEM = f"""You are BolPay, a friendly voice payment assistant (DEMO: no real money moves).
 
 Reply with ONLY one JSON object:
 
