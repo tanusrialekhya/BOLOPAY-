@@ -68,7 +68,7 @@ NON_ENGLISH_LANGUAGES = tuple(
     name for name in LANGUAGE_CODES if name != "English"
 )
 
-EN_TEXT = r"""brand|BoloPay
+EN_TEXT = r"""brand|BolPay
 nav_home|Home
 nav_scan|Scan & Pay
 nav_tx|Transactions
@@ -451,7 +451,7 @@ def _translate(language: str, keys: Iterable[str]) -> dict:
         }
 
         prompt = (
-            f"You are a professional translator for BoloPay, a voice-first "
+            f"You are a professional translator for BolPay, a voice-first "
             f"digital payment assistant for older adults and people with limited "
             f"digital literacy. Translate the values from English into "
             f"{target_language}. Use simple, respectful, natural everyday "
@@ -670,7 +670,7 @@ def clear_cache() -> None:
 
 if __name__ == "__main__":
     print(
-        f"BoloPay supports {len(LANGUAGE_CODES)} languages."
+        f"BolPay supports {len(LANGUAGE_CODES)} languages."
     )
 
     print(
