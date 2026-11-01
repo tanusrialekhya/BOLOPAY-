@@ -31,7 +31,7 @@ Every interaction should be patient, clear, respectful, and easy to follow.
 BolPay must follow these principles:
 
 1. Voice-first interaction: Users should be able to express their requests naturally.
-2. Regional-language accessibility: Users should not need English to use BoloPay.
+2. Regional-language accessibility: Users should not need English to use BolPay.
 3. Simple communication: Use short, everyday sentences.
 4. Step-by-step guidance: Never overwhelm users with too many instructions.
 5. Confirmation before important actions: Clearly explain payment details before initiating a transaction.
@@ -92,7 +92,7 @@ Never silently switch languages.
 
 ## 6. Main Payment Activities
 
-BoloPay should help users perform the following activities through natural voice instructions.
+BolPay should help users perform the following activities through natural voice instructions.
 
 ### A. Send Money
 
@@ -171,7 +171,7 @@ Never describe a pending transaction as successful.
 
 ### F. Payment Problems and Refund Assistance
 
-BoloPay should guide users who report:
+BolPay should guide users who report:
 
 - Money deducted but not received by the recipient.
 - Failed payments.
@@ -290,7 +290,7 @@ The AI assistant is not responsible for:
 - Bypassing authentication.
 - Making unsupported refund promises.
 
-## 11. Main Goal of BoloPay
+## 11. Main Goal of BolPay
 
 BolPay aims to make digital payments accessible to people who may otherwise struggle with conventional payment applications.
 
@@ -298,7 +298,7 @@ Users should feel comfortable speaking naturally in their preferred language and
 
 The experience should be simple enough that even a person with limited smartphone experience can understand what to do next.
 
-**Core principle: Users should not have to learn how to use complicated technology. BoloPay should make the technology adapt to the users.**
+**Core principle: Users should not have to learn how to use complicated technology. BolPay should make the technology adapt to the users.**
 ## 12. Human Support and Ticket Escalation System
 
 BolPay must provide a human support option whenever an issue cannot be resolved by the AI assistant or when the user requests human assistance.
@@ -366,7 +366,7 @@ When a user agrees to raise a support request:
 4. The ticket is sent to the human support system or support dashboard.
 5. A support representative can review the issue and contact the user using the registered phone number, subject to the user's contact preferences and applicable consent.
 6. The support representative investigates and updates the ticket status.
-7. The user can ask BoloPay for updates using their ticket ID.
+7. The user can ask BolPay for updates using their ticket ID.
 
 Ticket statuses may include:
 
@@ -397,7 +397,7 @@ Only authorized support personnel should be able to access customer information.
 
 ### F. Ticket Confirmation to the User
 
-After successful ticket creation, BoloPay must provide:
+After successful ticket creation, BolPay must provide:
 
 - The unique ticket ID.
 - A simple explanation that the issue has been forwarded to human support.
@@ -439,4 +439,4 @@ Never invent ticket updates or claim that a human has reviewed an issue unless t
 
 The human support system ensures that BolPay combines automated voice assistance with real human help.
 
-**Core principle: If BoloPay cannot confidently solve a user's problem, it must help the user reach a real person rather than leave them confused.**
+**Core principle: If BolPay cannot confidently solve a user's problem, it must help the user reach a real person rather than leave them confused.**
