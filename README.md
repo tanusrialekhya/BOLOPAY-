@@ -1,4 +1,4 @@
-# BOLOPAY💙 – Voice-First Digital Payment Assistant
+# BOLPAY💙 – Voice-First Digital Payment Assistant
 
 BoloPay is a voice-first payment assistant designed to make digital payments easier, safer, and more accessible, especially for senior citizens and people who find traditional payment apps difficult to use.
 
@@ -127,7 +127,7 @@ You can talk to BoloPay naturally, just like talking to another person. Here are
 
 ### 4. Understand BoloPay
 
-- "What is BoloPay?"
+- "What is BolPay?"
 - "How can I send money?"
 - "How many languages can you speak?"
 - "Which languages are supported?"
@@ -151,15 +151,11 @@ You can talk to BoloPay naturally, just like talking to another person. Here are
 
 **You:** Send ₹500 to Amma.
 
-**BoloPay:** You want to send ₹500 to Amma. Shall I proceed?
-
-**You:** Yes.
-
-**BoloPay:** Please enter your demo PIN to confirm the payment.
+**BolPay:** Please enter your demo PIN to confirm the payment.
 
 **You:** Enters the demo PIN.
 
-**BoloPay:** Your demo payment of ₹500 to Amma was successful!
+**BolPay:** Your demo payment of ₹500 to Amma was successful!
 
 *Note: These are example commands. The available recipients depend on the recipients configured in the application. All payments are simulated in Demo Mode and no real money is transferred.*
 
