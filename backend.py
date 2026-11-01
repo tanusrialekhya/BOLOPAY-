@@ -326,7 +326,7 @@ LANG_WORDS = ["language", "भाषा", "భాష", "மொழி", "ಭಾ�
 
 try:
 
-    with open(os.path.join("knowledge", "bolopay_knowledge.txt"), encoding="utf-8") as f:
+    with open(os.path.join("knowledge", "bolpay_knowledge.txt"), encoding="utf-8") as f:
 
         KNOWLEDGE = f.read()
 
@@ -394,11 +394,11 @@ Return ONLY one valid JSON object with these fields:
 
 Allowed categories:
 
-\- PAYMENT_QA: Questions about BoloPay payment information.about what bolopay mean what it does how many languages it can speak.
+\- PAYMENT_QA: Questions about BolPay payment information.about what bolpay mean what it does how many languages it can speak.
 
 \- NAVIGATION: Requests to open or navigate website features.
 
-\- OUT_OF_SCOPE: Questions unrelated to BoloPay.
+\- OUT_OF_SCOPE: Questions unrelated to BolPay.
 
 \- UNCLEAR: Questions whose intent cannot be determined.
 
@@ -626,7 +626,7 @@ def rule_based(text):
 
 # ---------------------------------------------------------------- STT (Gnani only; selected app language)
 
-EN_PROMPT = ("BoloPay voice payment. Pay 500 rupees to Amma. Send 200 to Dad, Rahul, Priya or Shopkeeper. "
+EN_PROMPT = ("BolPay voice payment. Pay 500 rupees to Amma. Send 200 to Dad, Rahul, Priya or Shopkeeper. "
 
              "Show balance, history, scan QR, open camera.")
 
@@ -668,7 +668,7 @@ def _extract(r):
 
 def _gnani_stt(wav, lang):
 
-    fd, path = tempfile.mkstemp(suffix=".wav", prefix="bolopay_")
+    fd, path = tempfile.mkstemp(suffix=".wav", prefix="bolpay_")
 
     try:
 
