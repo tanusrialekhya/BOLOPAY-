@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 import i18n
 
 load_dotenv()
-st.set_page_config(page_title="BoloPay", page_icon="💙", layout="wide", initial_sidebar_state="collapsed")
+st.set_page_config(page_title="BolPay", page_icon="💙", layout="wide", initial_sidebar_state="collapsed")
 
 APP_PIN = "7777"                                              # demo only
 MAX_PIN_TRIES = 3
