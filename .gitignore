@@ -17,7 +17,7 @@ wheels/
 # Logs and user data
 *.log
 conversation_logs.json
-bolopay_prefs.json
+bolpay_prefs.json
 translations_cache.json
 
 # Python
