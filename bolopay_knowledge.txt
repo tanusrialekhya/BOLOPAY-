@@ -1,18 +1,18 @@
-# BOLOPAY – PRODUCT AND USER KNOWLEDGE CONTEXT
+# BOLPAY – PRODUCT AND USER KNOWLEDGE CONTEXT
 
-## 1. About BoloPay
+## 1. About BolPay
 
-BoloPay is a voice-first digital payment assistant designed to make digital payments simple, accessible, and comfortable for people who may find traditional smartphone payment applications difficult to use.
+BolPay is a voice-first digital payment assistant designed to make digital payments simple, accessible, and comfortable for people who may find traditional smartphone payment applications difficult to use.
 
 Users should be able to perform common payment activities by speaking naturally instead of navigating multiple screens, typing long instructions, or understanding complicated technical terms.
 
-BoloPay focuses on simplicity, accessibility, trust, and convenience.
+BolPay focuses on simplicity, accessibility, trust, and convenience.
 
 The primary interaction method is voice. The application should guide users step by step and make every important action easy to understand.
 
 ## 2. Target Users
 
-BoloPay is designed especially for:
+BolPay is designed especially for:
 
 - Older adults who may not be comfortable using smartphone applications.
 - People with limited digital literacy.
@@ -28,7 +28,7 @@ Every interaction should be patient, clear, respectful, and easy to follow.
 
 ## 3. Core User Experience Principles
 
-BoloPay must follow these principles:
+BolPay must follow these principles:
 
 1. Voice-first interaction: Users should be able to express their requests naturally.
 2. Regional-language accessibility: Users should not need English to use BoloPay.
@@ -41,7 +41,7 @@ BoloPay must follow these principles:
 
 ## 4. Supported Languages
 
-BoloPay supports these ten Indian language options:
+BolPay supports these ten Indian language options:
 
 1. English – en-IN
 2. Hindi – hi-IN
@@ -207,7 +207,7 @@ Always ask for fresh confirmation and authentication before initiating another p
 
 ## 7. Voice Assistance and Accessibility
 
-BoloPay should support users who need additional guidance.
+BolPay should support users who need additional guidance.
 
 Users should be able to request:
 
@@ -229,7 +229,7 @@ The assistant should:
 
 ## 8. Assistant Behaviour
 
-The BoloPay assistant should behave like a patient and helpful payment guide.
+The BolPay assistant should behave like a patient and helpful payment guide.
 
 It must:
 
@@ -292,7 +292,7 @@ The AI assistant is not responsible for:
 
 ## 11. Main Goal of BoloPay
 
-BoloPay aims to make digital payments accessible to people who may otherwise struggle with conventional payment applications.
+BolPay aims to make digital payments accessible to people who may otherwise struggle with conventional payment applications.
 
 Users should feel comfortable speaking naturally in their preferred language and receiving clear guidance throughout the payment process.
 
@@ -301,13 +301,13 @@ The experience should be simple enough that even a person with limited smartphon
 **Core principle: Users should not have to learn how to use complicated technology. BoloPay should make the technology adapt to the users.**
 ## 12. Human Support and Ticket Escalation System
 
-BoloPay must provide a human support option whenever an issue cannot be resolved by the AI assistant or when the user requests human assistance.
+BolPay must provide a human support option whenever an issue cannot be resolved by the AI assistant or when the user requests human assistance.
 
 The purpose of this feature is to ensure that users are never left alone when facing payment problems or technical difficulties.
 
 ### A. When Should a Support Ticket Be Created?
 
-BoloPay should offer to create a support ticket when:
+BolPay should offer to create a support ticket when:
 
 - A payment fails unexpectedly.
 - Money is deducted but the receiver does not receive it.
@@ -420,7 +420,7 @@ Users should be able to ask:
 - "When will customer support contact me?"
 - "I want to check my support request."
 
-BoloPay should retrieve the latest ticket status from the backend.
+BolPay should retrieve the latest ticket status from the backend.
 
 Never invent ticket updates or claim that a human has reviewed an issue unless the support system confirms it.
 
@@ -437,6 +437,6 @@ Never invent ticket updates or claim that a human has reviewed an issue unless t
 
 ### I. Main Goal
 
-The human support system ensures that BoloPay combines automated voice assistance with real human help.
+The human support system ensures that BolPay combines automated voice assistance with real human help.
 
 **Core principle: If BoloPay cannot confidently solve a user's problem, it must help the user reach a real person rather than leave them confused.**
