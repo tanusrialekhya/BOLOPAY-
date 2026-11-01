@@ -14,7 +14,7 @@ from dotenv import load_dotenv
 import i18n
 
 load_dotenv()
-st.set_page_config(page_title="BoloPay", page_icon="💙", layout="wide", initial_sidebar_state="collapsed")
+st.set_page_config(page_title="BolPay", page_icon="💙", layout="wide", initial_sidebar_state="collapsed")
 
 APP_PIN = "7777"                                              # demo only
 MAX_PIN_TRIES = 3
@@ -771,6 +771,6 @@ with right:
                     amount=float(ss.amount), stage="pin" if muted else "idle", muted=muted, labels=labels, say=say,
                     font=FONT, font_px={"Small": 16, "Medium": 18, "Large": 21}[ss.font_size],
                     history=[f'{h["time"]}: ₹{h["amount"]:,.0f} {h["name"]}' for h in ss.history[-5:]],
-                    key="bolopay_voice", default=None)
+                    key="bolpay_voice", default=None)
     if _v and _v.get("id") != ss.last_voice_id:
         apply_voice_action(_v)
