@@ -682,7 +682,7 @@ with left:
             go("home")
 
 # ---------------- ASSISTANT (right column; same place on every screen so the mic never remounts) ----------------
-_voice = components.declare_component("bolopay_voice", path=os.path.join(HERE, "voice_component"))
+_voice = components.declare_component("bolpay_voice", path=os.path.join(HERE, "voice_component"))
 
 with right:
     st.markdown(stage_html(), unsafe_allow_html=True)
@@ -698,7 +698,7 @@ with right:
                     amount=float(ss.amount), stage="pin" if muted else "idle", muted=muted, labels=labels, say=say,
                     font=FONT, font_px={"Small": 16, "Medium": 18, "Large": 21}[ss.font_size],
                     history=[f'{h["time"]}: ₹{h["amount"]:,.0f} {h["name"]}' for h in ss.history[-5:]],
-                    key="bolopay_voice", default=None)
+                    key="bolpay_voice", default=None)
     if _v and _v.get("id") != ss.last_voice_id:
         apply_voice_action(_v)
 
