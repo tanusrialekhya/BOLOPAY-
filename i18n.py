@@ -1,4 +1,4 @@
-"""BoloPay internationalization (i18n).
+"""BolPay internationalization (i18n).
 
 Supports exactly 10 user-facing languages:
 English plus nine Indian languages.
