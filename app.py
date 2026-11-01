@@ -17,7 +17,7 @@ st.set_page_config(page_title="BolPay", page_icon="💙", layout="wide", initial
 
 APP_PIN = "7777"                                              # demo only
 MAX_PIN_TRIES = 3
-VOICE_WS_URL = os.getenv("VOICE_WS_URL", "ws://localhost:8000/ws")
+VOICE_WS_URL = os.getenv("VOICE_WS_URL", "wss://bolopay-rrb4.onrender.com/ws")
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 DEFAULTS = {
