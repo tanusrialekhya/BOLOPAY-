@@ -18,7 +18,7 @@ st.set_page_config(page_title="BolPay", page_icon="💙", layout="wide", initial
 
 APP_PIN = "7777"                                              # demo only
 MAX_PIN_TRIES = 3
-VOICE_WS_URL = os.getenv("VOICE_WS_URL", "wss://bolopay-rrb4.onrender.com/ws")
+VOICE_WS_URL = os.getenv("VOICE_WS_URL", "wss://bolpay-rrb4.onrender.com/ws")
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 DEFAULTS = {
@@ -755,7 +755,7 @@ with left:
             go("home")
 
 # ---------------- ASSISTANT (right column; same place on every screen so the mic never remounts) ----------------
-_voice = components.declare_component("bolopay_voice", path=os.path.join(HERE, "voice_component"))
+_voice = components.declare_component("bolpay_voice", path=os.path.join(HERE, "voice_component"))
 
 with right:
     st.markdown(stage_html(), unsafe_allow_html=True)
