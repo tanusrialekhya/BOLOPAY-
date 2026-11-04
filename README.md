@@ -4,6 +4,13 @@ BoloPay is a voice-first payment assistant designed to make digital payments eas
 
 Users can interact with BoloPay using voice commands in multiple Indian languages. The assistant understands requests, guides users through the payment process, and provides spoken responses.
 
+🔗 **Live demo:** https://bolpay.streamlit.app/
+🎥 **Demo video:** https://x.com/tanusri_alekhya/status/2117014165307146609
+📄 **Solution pitch:** [SOLUTION_PITCH.md](SOLUTION_PITCH.md)
+🏆 Built solo for the Great Indian AI Internship Challenge 2026 by Gnani.ai
+
+> If the voice service is waking up, wait about 30 seconds and click the mic again.
+
 ## Features
 
 - **Voice-based interaction:** Give commands using your voice instead of navigating multiple screens.
